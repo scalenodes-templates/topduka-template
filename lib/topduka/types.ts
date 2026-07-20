@@ -29,7 +29,6 @@ export interface Category {
 export interface ProductFilters {
   id?: UUID;
   sku?: string;
-  slug?: string;
   search_term?: string;
   barcode?: string;
   skip?: number;

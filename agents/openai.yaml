@@ -1,0 +1,4 @@
+interface:
+  display_name: "TopDuka Storefront"
+  short_description: "Build complete storefronts with TopDuka APIs"
+  default_prompt: "Use $topduka-template to implement a production-ready TopDuka storefront feature."

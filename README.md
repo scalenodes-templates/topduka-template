@@ -4,6 +4,8 @@ A complete Next.js storefront starter for a TopDuka store: server-rendered catal
 
 The UI is intentionally generic and easy to replace. The important commerce and API wiring is already done.
 
+For a complete first-time setup, including MCP and the optional Codex skill, see the [installation guide](INSTALLATION.md). For catalog feeds, filters, pagination, and every public GET route, use the [GET API guide](GET_API_GUIDE.md).
+
 ## What is included
 
 - Product and category catalog loaded on the server
@@ -43,6 +45,8 @@ TOPDUKA_AGENT_ID=optional_agent_uuid
 ```
 
 You may paste either the ScaleNodes endpoint or the full endpoint ending in `/pb/v1`; the client normalizes both forms.
+
+The same API origin exposes a store-scoped MCP server at `/mcp`. Coding agents can authenticate with `Authorization: Bearer <TOPDUKA_API_KEY>`, read `topduka://api/reference`, and use the `implement_topduka_api` prompt. The repository-level `SKILL.md` tells compatible agents how to extend this template without exposing credentials or inventing API contracts.
 
 The project also accepts the legacy names `NEXT_TOPDUKA_API_URL`, `NEXT_TOPDUKA_API_KEY`, and `NEXT_TOPDUKA_AGENT_ID`. Do not use `NEXT_PUBLIC_` for the API key: browsers never need this secret.
 
